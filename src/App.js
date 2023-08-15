@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import Map from './Components/Map';
 import './App.css';
+
+const location = {
+  address: '5 Place Bel Air, 20012 arrondissement de Sidi Belyout, Maroc',
+  lat: 33.59175387040091,
+  lng: -7.629056646167155,
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Map location={location} zoomLevel={15} />
     </div>
   );
 }
